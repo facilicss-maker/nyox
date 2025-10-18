@@ -3,46 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nyox — Coming Soon</title>
+  <title>Nyox — Maintenance</title>
   <style>
-    /* Full-screen center alignment */
-    body {
+    /* Make image cover the entire viewport */
+    html, body {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #000; /* Change this to your brand color if you want */
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
     }
 
-    /* Make the image responsive */
-    img {
-      width: 100%;
-      max-width: 800px; /* Optional: limits size on big screens */
-      height: auto;
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: #000; /* fallback color */
     }
 
-    /* Optional text overlay */
-    .text-overlay {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* fills screen without distortion */
+      display: block;
+    }
+
+    /* Text at the bottom */
+    .bottom-text {
       position: absolute;
-      top: 90%;
+      bottom: 20px; /* distance from bottom */
       width: 100%;
       text-align: center;
-      color: #fff;
-      font-size: 24px;
+      color: #ffffff;
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
     @media(max-width: 600px) {
-      .text-overlay {
-        font-size: 18px;
+      .bottom-text {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <img src="maintenance-page.png" alt="Website under construction">
-  <div class="text-overlay">Nyox.com — Launching Soon 🚀</div>
+  <img src="maintenance-page.png" alt="Website under maintenance">
+  <div class="bottom-text">
+    nyox.co.uk is currently in maintenance. Thank you for your patience.
+  </div>
 </body>
 </html>
